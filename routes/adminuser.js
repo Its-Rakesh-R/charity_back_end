@@ -32,7 +32,7 @@ router.post('/add_child',upload.single('file'),function(req,res){
         region:req.body.region,
         personal_identity:req.body.personal_identity,
         sponsor:"no",
-        profile:'http://localhost:3003/'+req.file.filename
+        profile:req.file.filename
     })
     .then(()=>{
         res.send('successfully inserted')
